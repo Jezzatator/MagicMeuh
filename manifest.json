@@ -1,0 +1,32 @@
+{
+
+    "manifest_version": 3,
+    "name": "MeuhMagic",
+    "version": "1.0.0",
+    "description": "Extension de control parental",
+    "author": "LesM3ill2Ur_BGdeAdA",
+
+    "icons": {              
+      "16": "images/icon16.png", 
+      "24": "images/icon24.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"    
+    },
+
+    "action": {
+        "default_title": "Click Me",
+        "default_popup": "popup.html"
+        },
+
+  "commands": {
+    "_execute_action": {
+        "suggested_key": {
+            "mac" : "MacCtrl+Shift+F"
+        }
+    }
+  }
+
+  
+} 
+
