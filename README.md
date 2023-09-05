@@ -1,4 +1,5 @@
-# Projet-collectif-ExtNav-Eden-Thalia-Jeremie
+# Projet Collectif Extension de Navigateur
+# Eden Thalia Jérémie
 
 # Contexte
 
