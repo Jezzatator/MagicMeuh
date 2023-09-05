@@ -1,3 +1,8 @@
+import { fetchInsutls } from './fetch.js';
+
+const tomate = [fetchInsutls()] 
+console.log(tomate)
+
 function isExcluded(elm) {
     if (elm.tagName == "STYLE") {
       return true;
