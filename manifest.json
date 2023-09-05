@@ -14,6 +14,19 @@
       "128": "images/icon128.png"    
     },
 
+    "background": {
+      "service_worker" : "/scripts/background.js"
+    },
+
+    "content_scripts": [
+      {
+        "js": ["scripts/content.js"],
+        "all-frames": true,
+        "matches" : ["*://*/*"],
+        "run_at": "document_end"
+      }
+    ],
+
     "action": {
         "default_title": "Click Me",
         "default_popup": "popup.html"
