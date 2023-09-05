@@ -38,7 +38,7 @@ if (page) {
             page[i].innerHTML = page[i].innerHTML.replace("conard", "meuuuh")
         }
         if (page[i].innerHTML.includes("con")) {
-            page[i].innerHTML = page[i].innerHTML.replace("con", "meuuuh")
+            page[i].innerHTML = page[i].innerHTML.replace(/\bcon\b/g, "meuuuh")
         }
     }
 }
