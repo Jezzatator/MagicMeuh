@@ -1,5 +1,5 @@
 # Projet Collectif Extension de Navigateur
-# Eden Thalia Jérémie
+[Eden](https://github.com/Edenplan) [Thalia](https://github.com/thaliawoods) [Jérémie](https://github.com/Jezzatator)
 
 # Contexte
 
