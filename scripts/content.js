@@ -1,39 +1,45 @@
-const fetchInsutls = async () => {
-    // Fetch pour récupéré le fichier JSON
-    try {
-        const response = await fetch("https://fr.wiktionary.org/w/api.php?action=query&list=categorymembers&cmtitle=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&cmlimit=max&format=json");
+// const fetchInsutls = async () => {
+//     // Fetch pour récupéré le fichier JSON
+//     try {
+//         const response = await fetch("https://fr.wiktionary.org/w/api.php?action=query&list=categorymembers&cmtitle=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&cmlimit=max&format=json", {
+//           mode: "no-cors"
+//         });
 
-// Verifie si la réponse est OK - code HTTP 200
-        if (!response.ok) {
-            throw new Error("La requête a échoué avec un code HTTP ${response.status}");
-        }
+//     // Verifie si la réponse est OK - code HTTP 200
+//         if (!response.ok) {
+//             throw new Error("La requête a échoué avec un code HTTP ${response.status}");
+//         }
 
-        const data = await response.json();
+//         const data = await response.json();
 
-        if (data.query && Array.isArray(data.query.categorymembers)) {
-            const titleArray = data.query.categorymembers.map(member => member.title);
-            //console.log("titleArray :" + titleArray)
-            localStorage.setItem('Insultes', JSON.stringify(titleArray));
+//         if (data.query && Array.isArray(data.query.categorymembers)) {
+//             const titleArray = data.query.categorymembers.map(member => member.title);
+//             //console.log("titleArray :" + titleArray)
+//             localStorage.setItem('Insultes', JSON.stringify(titleArray));
 
-        } else {
-            console.error("le JSON ne contient pas la strucure attendu.");
-        }
-    } catch(error) {
-        console.error("une erreur s\'est produite lors de la récupération du JSON :", error)
-    }
-}
+//         } else {
+//             console.error("le JSON ne contient pas la strucure attendu.");
+//         }
+//     } catch(error) {
+//         console.error("une erreur s\'est produite lors de la récupération du JSON :", error);
+//         return ""; 
+//     }
+// }
 
-const insultes = () => {
-    if (!(localStorage.getItem("Insultes"))) {
-        fetchInsutls()
-        return insultes()
-    } else {
-        return JSON.parse(localStorage.getItem("Insultes"))
-    }
-}
+// const insultes = () => {
+//     if (!(localStorage.getItem("Insultes"))) {
+//       fetchInsutls()
+//         return insultes()
+//     } else {
+//         return JSON.parse(localStorage.getItem("Insultes"))
+//     }
+//   }
 
 
-console.log(insultes())
+const insultes = ['abruti', 'aller chier dans sa caisse', 'aller niquer sa mère', 'aller se faire enculer', 'aller se faire endauffer', 'aller se faire foutre', 'aller se faire mettre', 'allez vous faire foutre', 'andouille', 'anglo-fou', 'appareilleuse', 'Arabe', 'assimilé', 'assimilée', 'astèque', 'avorton', 'bachi-bouzouk', 'baleine', 'bande d’abrutis', 'baraki', 'bâtard', 'baudet', 'beauf', 'bellicole', 'bête', 'bête à pleurer', 'bête comme ses pieds', 'bête comme un camion', 'bête comme un chou', 'bête comme un cochon', 'bête comme un cygne', 'bête comme une oie', 'biatch', 'bibi', 'bic', 'bicot', 'bicotte', 'bique', 'bite', 'bitembois', 'Bitembois', 'bolos', 'bordille', 'boucaque', 'boudin', 'bouègre', 'bouffi', 'bouffon', 'bouffonne', 'bougnoul', 'bougnoule', 'Bougnoulie', 'bougnoulisation', 'bougnouliser', 'bougre', 'boukak', 'boulet', 'bounioul', 'bounioule', 'bourdille', 'bourrer', 'bourricot', 'bovo', 'branleur', 'bridé', 'bridée', 'brigand', 'brise-burnes', 'bulot', 'cacou', 'cafre', 'cageot', 'caldoche', 'carcavel', 'casse-bonbon', 'casse-couille', 'casse-couilles', 'cave', 'chagasse', 'charlot de vogue', 'charogne', 'chauffard', 'chauffeur', 'chauffeuse', 'chbeb', 'cheveux bleus', 'chiabrena', 'chien de chrétien', 'chiennasse', 'chienne', 'chier', 'chieur', 'chieuse', 'chinetoc', 'chinetoque', 'Chinetoque', 'chintok', 'chleuh', 'chnoque', 'choucroutard']
+
+// console.log(insultes()[i])
+console.log(insultes)
 
 
 // Fonction pour remplacer un mot spécifique 
@@ -84,8 +90,9 @@ function isExcluded(elm) {
 //ici le code pour remplacer les mots
 
       //Foreach insult 
-      //Foreache INSULT/INSULTS/insults/Insult/Insults
+      
       elm.nodeValue = elm.nodeValue.replace(/\bcon\b/g, "MEUH");
+
     }
   }
   
