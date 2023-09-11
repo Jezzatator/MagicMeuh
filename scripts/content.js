@@ -1,114 +1,105 @@
-localStorage.clear()
-// const fetchInsutls = async () => {
-//     // Fetch pour récupéré le fichier JSON
-//     try {
-//         const response = await fetch("https://fr.wiktionary.org/w/api.php?action=query&list=categorymembers&cmtitle=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&cmlimit=max&format=json", {
-//           mode: "no-cors"
-//         });
-
-//     // Verifie si la réponse est OK - code HTTP 200
-//         if (!response.ok) {
-//             throw new Error("La requête a échoué avec un code HTTP ${response.status}");
-//         }
-
-//         const data = await response.json();
-
-//         if (data.query && Array.isArray(data.query.categorymembers)) {
-//             const titleArray = data.query.categorymembers.map(member => member.title);
-//             //console.log("titleArray :" + titleArray)
-//             localStorage.setItem('Insultes', JSON.stringify(titleArray));
-
-//         } else {
-//             console.error("le JSON ne contient pas la strucure attendu.");
-//         }
-//     } catch(error) {
-//         console.error("une erreur s\'est produite lors de la récupération du JSON :", error);
-//         return ""; 
-//     }
-// }
-
 const main = () => {
-chrome.storage.local.get(['Insultes']).then((results) => {
+  chrome.storage.local.get(['Insultes']).then((insultes) => {
 
-// Fonction pour remplacer un mot spécifique 
+    const insultesArray = insultes.Insultes
 
-// D'abord cherche les balises à exclures
-function isExcluded(elm) {
-  if (elm.tagName == "STYLE") {
-    return true;
-  }
-  if (elm.tagName == "SCRIPT") {
-    return true;
-  }
-  if (elm.tagName == "NOSCRIPT") {
-    return true;
-  }
-  if (elm.tagName == "IFRAME") {
-    return true;
-  }
-  if (elm.tagName == "OBJECT") {
-    return true;
-  }
-  return false
-}
+    // Creation table de hachage 
+    const motRemplacement = {};
 
-function traverse(elm) {
-  if (elm.nodeType == Node.ELEMENT_NODE || elm.nodeType == Node.DOCUMENT_NODE) {
-
-    // exclude elements with invisible text nodes
-    if (isExcluded(elm)) {
-      return
+    for (let i = 0; i < insultesArray.length; i++) {
+      motRemplacement[insultesArray[i]] = "MEUH";
     }
 
-    for (var i=0; i < elm.childNodes.length; i++) {
-      // recursively call to traverse
-      traverse(elm.childNodes[i]);
+    console.log(motRemplacement)
+
+    // Fonction pour remplacer un mot spécifique 
+
+    // D'abord cherche les balises à exclures (ne comptient pas de textes visibles)
+    function isExcluded(elm) {
+      if (elm.tagName == "STYLE") {
+        return true;
+      }
+      if (elm.tagName == "SCRIPT") {
+        return true;
+      }
+      if (elm.tagName == "NOSCRIPT") {
+        return true;
+      }
+      if (elm.tagName == "IFRAME") {
+        return true;
+      }
+      if (elm.tagName == "OBJECT") {
+        return true;
+      }
+      return false
     }
 
-  }
+    function traverse(elm) {
+      if (elm.nodeType == Node.ELEMENT_NODE || elm.nodeType == Node.DOCUMENT_NODE) {
 
-  //Si cela trouve une bonne balsie texte alors on fait le happy path
-  if (elm.nodeType == Node.TEXT_NODE) {
+        // Exclus les balises avec du texte invisible
+        if (isExcluded(elm)) {
+          return
+        }
 
-    // exclude text node consisting of only spaces
-    if (elm.nodeValue.trim() == "") {
-      return
+        for (let i = 0; i < elm.childNodes.length; i++) {
+          // Appel recursif de traverse (permet de vefifier dans les enfants s'il y a pas de balises a exclures)
+          traverse(elm.childNodes[i]);
+        }
+
+      }
+
+      // Si cela trouve une bonne balsie texte alors on fait le happy path
+      if (elm.nodeType == Node.TEXT_NODE) {
+
+        //Exclus les textes nodes composés seulement d'espaces blancs 
+        if (elm.nodeValue.trim() == "") {
+          return
+        }
+
+        // Sépare les mots du text 
+        const motsDansTexte = elm.nodeValue.split(/[,. ]+/);
+
+        // Parcourez les mots et remplacez-les s'ils sont dans la table de hachage
+        for (let i = 0; i < motsDansTexte.length; i++) {
+          const mot = motsDansTexte[i].toLowerCase();
+
+          // Vérifiez si le mot est dans la table de hachage
+          if (motRemplacement.hasOwnProperty(mot)) {
+            motsDansTexte[i] = motRemplacement[mot]; // Remplacez le mot par "MEUH"
+          }
+        }
+
+        // Rejoignez les mots pour obtenir le texte final
+        elm.nodeValue = motsDansTexte.join(" ");
+      }
     }
 
-//ici le code pour remplacer les mots
 
-    //Foreach insult 
 
-    elm.nodeValue = elm.nodeValue.replace(/\bcon\b/g, "MEUH");
+    traverse(document);
 
-  }
+    // Options for the observer (which mutations to observe)
+    const config = { attributes: true, childList: true, subtree: true };
+
+    // Callback function to execute when mutations are observed
+    const callback = function (mutationsList, observer) {
+      // Use traditional 'for loops' for IE 11
+      for (const mutation of mutationsList) {
+        traverse(mutation.target);
+
+      }
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback);
+
+    // Start observing the target node for configured mutations
+    observer.observe(document, config);
+  })
+  .catch
 }
 
-traverse(document);
-
-// Options for the observer (which mutations to observe)
-const config = { attributes: true, childList: true, subtree: true };
-
-// Callback function to execute when mutations are observed
-const callback = function(mutationsList, observer) {
-  // Use traditional 'for loops' for IE 11
-  for(const mutation of mutationsList) {
-      traverse(mutation.target);
-
-  }
-};
-
-// Create an observer instance linked to the callback function
-const observer = new MutationObserver(callback);
-
-// Start observing the target node for configured mutations
-observer.observe(document, config);
-
-
-
-
-
-})
-}
+main()
 
 
