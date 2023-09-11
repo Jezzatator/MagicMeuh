@@ -1,0 +1,128 @@
+[
+    {
+      "id": 1,
+      "priority": 2,
+      "action": {
+        "type": "redirect",
+        "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+      },
+      "condition": {
+        "urlFilter": "*cart*",
+        "resourceTypes": ["main_frame", "sub_frame"]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 2,
+      "action": {
+        "type": "redirect",
+        "redirect" : {
+          "extensionPath" : "/vache.html"
+      }
+      },
+      "condition": {
+        "urlFilter": "*panier*",
+        "resourceTypes": ["main_frame", "sub_frame"]
+      }
+    },
+    {
+        "id": 3,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*checkout*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 4,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*order*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 5,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*payment*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 6,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*store*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 7,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*shop*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 8,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*bag*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 9,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*paypal.com/*",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      }
+  ]

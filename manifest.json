@@ -18,6 +18,14 @@
       "service_worker" : "/scripts/background.js"
     },
 
+    "permissions": [
+      "storage",
+      "activeTab",
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback",
+      "scripting"
+    ],
+
     "content_scripts": [
       {
         "js": ["scripts/content.js"],
@@ -38,8 +46,59 @@
             "mac" : "MacCtrl+Shift+F"
         }
     }
-  }
+  },
 
-  
+  "web_accessible_resources": [ { "resources" : ["/vache.html"], "matches": ["*://*/*"] } ],
+
+  "declarative_net_request" : {
+    "rule_resources" : [
+      {
+      "id": "1", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "2", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "3", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "4", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "5", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "6", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "7", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "8", 
+      "enabled": true ,
+      "path": "rules.json"
+    },
+    {
+      "id": "9", 
+      "enabled": true ,
+      "path": "rules.json"
+    }]
+  },
+
+  "host_permissions": ["<all_urls>"] 
 } 
 
