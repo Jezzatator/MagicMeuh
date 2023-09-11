@@ -4,6 +4,8 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.local.get(null, function (items) {
 
         if (Object.keys(items).length === 0) {
+
+
             const fetchInsutls = async () => {
                 // Fetch pour récupéré le fichier JSON
                 try {

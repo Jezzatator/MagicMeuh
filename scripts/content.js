@@ -97,7 +97,6 @@ const main = () => {
     // Start observing the target node for configured mutations
     observer.observe(document, config);
   })
-  .catch
 }
 
 main()
