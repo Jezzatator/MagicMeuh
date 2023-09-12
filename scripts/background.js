@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 
             const fetchInsutls = async () => {
-                // Fetch pour récupéré le fichier JSON
+                // Fetch pour récupérer le fichier JSON
                 try {
                     const response = await fetch("https://fr.wiktionary.org/w/api.php?action=query&list=categorymembers&cmtitle=Cat%C3%A9gorie:Insultes_en_fran%C3%A7ais&cmlimit=max&format=json");
 
@@ -18,10 +18,12 @@ chrome.runtime.onInstalled.addListener(() => {
 
                     const data = await response.json();
 
+                    // Verifie si le JSON est conforme à la structure attendue
                     if (data.query && Array.isArray(data.query.categorymembers)) {
                         const titleArray = data.query.categorymembers.map(member => member.title);
                         console.log("titleArray :" + titleArray)
 
+                        // Stock le tableau dans le chrome storage avec la clef "Insultes"
                         chrome.storage.local.set({ Insultes: titleArray }).then(() => {
                             console.log("Value is set");
                         });

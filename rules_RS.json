@@ -1,0 +1,325 @@
+[
+    {
+        "id": 1,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*facebook*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*twitter*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://*.x.*/*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*snapchat*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*tumblr*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 20,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*linkedin*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*viadeo*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*instagram*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*pinterest*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*pinterest*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*flickr*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*youtube.*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*tiktok*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 21,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*dailymotion*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*periscope*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*reddit*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*telegram*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*tinder*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "priority": 2,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/vache.html"
+            }
+        },
+        "condition": {
+            "urlFilter": "*happn*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame"
+            ]
+        }
+    }
+]
