@@ -9,7 +9,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*facebook*",
+            "urlFilter": "*facebook.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -26,7 +26,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*twitter*",
+            "urlFilter": "*twitter.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -60,7 +60,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*snapchat*",
+            "urlFilter": "*snapchat.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -77,7 +77,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*tumblr*",
+            "urlFilter": "*tumblr.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -94,7 +94,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*linkedin*",
+            "urlFilter": "*linkedin.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -111,7 +111,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*viadeo*",
+            "urlFilter": "*viadeo.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -128,7 +128,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*instagram*",
+            "urlFilter": "*instagram.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -145,7 +145,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*pinterest*",
+            "urlFilter": "*pinterest.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -162,7 +162,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*pinterest*",
+            "urlFilter": "*pinterest.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -179,7 +179,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*flickr*",
+            "urlFilter": "*flickr.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -213,7 +213,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*tiktok*",
+            "urlFilter": "*tiktok.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -230,7 +230,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*dailymotion*",
+            "urlFilter": "*dailymotion.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -247,7 +247,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*periscope*",
+            "urlFilter": "*periscope.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -264,7 +264,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*reddit*",
+            "urlFilter": "*reddit.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -281,7 +281,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*telegram*",
+            "urlFilter": "*telegram.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -298,7 +298,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*tinder*",
+            "urlFilter": "*tinder.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
@@ -315,7 +315,7 @@
             }
         },
         "condition": {
-            "urlFilter": "*happn*",
+            "urlFilter": "*happn.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame"
