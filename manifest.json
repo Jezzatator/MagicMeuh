@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "description": "Extension de control parental",
     "author": "LesM3ill2Ur_BGdeAdA",
+    "options_page": "/options/options.html",
 
     "icons": {              
       "16": "images/icon16.png", 
@@ -38,7 +39,7 @@
 
     "action": {
         "default_title": "Click Me",
-        "default_popup": "popup.html"
+        "default_popup": "/popup/popup.html"
         },
 
   "commands": {

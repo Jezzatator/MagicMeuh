@@ -1,5 +1,8 @@
 const main = () => {
-
+    chrome.storage.sync.get(['blockInsults'], function(result) {
+        const blockInsults = result.blockInsults || false;
+    
+        if (blockInsults) {
   chrome.storage.local.get(['Insultes']).then((insultes) => {
 
     const insultesArray = insultes.Insultes
@@ -96,5 +99,8 @@ const main = () => {
     observer.observe(document, config);
   })
 }
+})
+}
+
 
 main()
