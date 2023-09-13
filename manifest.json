@@ -24,7 +24,8 @@
       "activeTab",
       "declarativeNetRequest",
       "declarativeNetRequestFeedback",
-      "scripting"
+      "scripting",
+      "proxy"
     ],
 
     "content_scripts": [
@@ -49,55 +50,21 @@
     }
   },
 
-  "web_accessible_resources": [ { "resources" : ["/vache.html"], "matches": ["*://*/*"] } ],
+  "web_accessible_resources": [ { "resources" : ["/vache.html", "/blockView/assets/*"], "matches": ["*://*/*"] } ],
 
   "declarative_net_request" : {
     "rule_resources" : [
       {
-      "id": "1", 
-      "enabled": true ,
+      "id": "ruleset_Payment", 
+      "enabled": true,
       "path": "rules.json"
     },
     {
-      "id": "2", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "3", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "4", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "5", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "6", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "7", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "8", 
-      "enabled": true ,
-      "path": "rules.json"
-    },
-    {
-      "id": "9", 
-      "enabled": true ,
-      "path": "rules.json"
-    }]
+      "id": "ruleset_RS", 
+      "enabled": false,
+      "path": "rules_RS.json"
+    }
+  ]
   },
 
   "host_permissions": ["<all_urls>"] 

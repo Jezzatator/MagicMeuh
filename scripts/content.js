@@ -70,12 +70,9 @@ const main = () => {
 
           // Vérifiez si le mot est dans la table de hachage
           if (motRemplacement.hasOwnProperty(mot)) {
-            motsDansTexte[i] = motRemplacement[mot]; // Remplacez le mot par "MEUH"
+            elm.nodeValue = elm.nodeValue.replace(new RegExp(`\\b${mot}\\b`, 'gi'), "MEUH")
           }
         }
-
-        // Rejoignez les mots pour obtenir le texte final
-        elm.nodeValue = motsDansTexte.join(" ");
       }
     }
 
@@ -107,5 +104,3 @@ const main = () => {
 
 
 main()
-
-

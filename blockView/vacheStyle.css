@@ -1,0 +1,75 @@
+body {
+    background-image: url(/blockView/assets/background.gif);
+    background-size: cover;
+
+    height: 100vh;
+    padding:0;
+    margin:0;
+} 
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo1 . logo5"
+      "Logo2 . Logo3"
+      "Logo4 . Logo6";
+  }
+  
+  .Logo2 { 
+    grid-area: Logo2;
+    float : left;
+    margin: 50px;
+    margin-left: 120px;
+ }
+  
+  .Logo3 { 
+    grid-area: Logo3;
+    float : right;
+    margin: 50px;
+    margin-left: 100px;
+ }
+  
+  .logo1 { 
+    grid-area: logo1;
+    float : left;
+    margin: 50px;
+    margin-top: 100px;
+    margin-left: 120px;
+ }
+  
+  .Logo4 { 
+    grid-area: Logo4;
+    float : left;
+    margin-left: 120px;
+    margin-top: -150px;
+   }
+  
+  .logo5 { 
+    grid-area: logo5;
+    float : right;
+    margin: 50px;
+    margin-top: 100px;
+    margin-left: 50px; }
+  
+  .Logo6 { 
+    grid-area: Logo6;
+   }
+  
+
+   h1 {
+    text-align:center;
+    margin-top: 80px;
+    font-size: 48px;
+    text-shadow: -1px -1px rgb(212, 255, 153), 1px 1px rgb(221, 185, 68), -3px 0 4px #000;
+    font-family:"Segoe print", Arial, Helvetica, sans-serif;
+    color:#6bf;
+    padding:24px 32px 32px 32px;
+    font-weight:lighter;
+}
+
+  
+
