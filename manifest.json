@@ -23,7 +23,8 @@
       "activeTab",
       "declarativeNetRequest",
       "declarativeNetRequestFeedback",
-      "scripting"
+      "scripting",
+      "proxy"
     ],
 
     "content_scripts": [
@@ -59,7 +60,7 @@
     },
     {
       "id": "ruleset_RS", 
-      "enabled": true,
+      "enabled": false,
       "path": "rules_RS.json"
     }
   ]
