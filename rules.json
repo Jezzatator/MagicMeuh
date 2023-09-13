@@ -124,5 +124,47 @@
           "urlFilter": "*paypal.com/*",
           "resourceTypes": ["main_frame", "sub_frame"]
         }
+      },
+      {
+        "id": 10,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*://shop.*.*/",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 11,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*://*/cart",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
+      },
+      {
+        "id": 12,
+        "priority": 2,
+        "action": {
+          "type": "redirect",
+          "redirect" : {
+            "extensionPath" : "/vache.html"
+        }
+        },
+        "condition": {
+          "urlFilter": "*://pay.google.*/",
+          "resourceTypes": ["main_frame", "sub_frame"]
+        }
       }
   ]
