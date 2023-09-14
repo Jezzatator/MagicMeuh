@@ -79,3 +79,46 @@ chrome.runtime.onInstalled.addListener(() => {
   })
 
 });
+
+
+
+
+
+
+
+           
+
+
+// chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+//   if (message.action === "activateFacebookBlock") {
+//     // Activez les règles de blocage Facebook
+//     chrome.declarativeNetRequest.updateDynamicRules({
+//       addRules: [
+//         {
+//           "id": 13,
+//           "priority": 2,
+//           "action": {
+//               "type": "redirect",
+//               "redirect": {
+//                   "extensionPath": "/vache.html"
+//               }
+//           },
+//           "condition": {
+//               "urlFilter": "*facebook.*",
+//               "resourceTypes": [
+//                   "main_frame",
+//                   "sub_frame"
+//               ]
+//           }
+//       }
+//       ]
+//     });
+//   } else if (message.action === "deactivateFacebookBlock") {
+//     // Désactivez les règles de blocage Facebook
+//     chrome.declarativeNetRequest.updateDynamicRules({
+//       removeRuleIds: [13] // ID de la règle à supprimer
+//       console.log("rule removed");
+//     });
+//   }
+// });
+

@@ -18,6 +18,7 @@
     "background": {
       "service_worker" : "/scripts/background.js"
     },
+   
 
     "permissions": [
       "storage",
@@ -61,7 +62,7 @@
     },
     {
       "id": "ruleset_RS", 
-      "enabled": false,
+      "enabled": true,
       "path": "rules_RS.json"
     }
   ]

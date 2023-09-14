@@ -121,6 +121,34 @@
     top: 3px;
     background-color: #fff;
 }
-        
+     
 
+h1 { 
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+ 
 
+ .fleur {
+    margin-top: -270px;
+ }
+ 
+ .f2 {
+    margin-left: 740px;
+    width: 25%;
+ }
+
+ .f1 {
+    width: 25%;
+ }
+
+ .insulte {
+    margin-left: 690px;
+    margin-top: -100px;
+    
+ }
+
+ .logo {
+    width: 25%;
+ }
