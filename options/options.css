@@ -132,6 +132,7 @@ h1 {
 
  .fleur {
     margin-top: -270px;
+    z-index: auto;
  }
  
  .f2 {
